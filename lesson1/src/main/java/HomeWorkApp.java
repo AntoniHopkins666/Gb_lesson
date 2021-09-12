@@ -1,27 +1,25 @@
+/**
+ * java 1. Homework 1
+ *
+ * @autor Anton_Mahin
+ * @version 12 sep 2021
+ */
 public class HomeWorkApp {
     public static void main(String[] args) {
-        printThreeWords();
-        checkSumSign ();
-        printColor ();
-        compareNumbers ();
+        printThreeWords();// 1. Создайте метод printThreeWords(), который при вызове должен отпечатать в столбец три слова: Orange, Banana, Apple
+        System.out.println (checkSumSign (2,-4)); //Создайте метод checkSumSign(), в теле которого объявите две int переменные a и b, и инициализируйте их любыми значениями, которыми захотите. Далее метод должен просуммировать эти переменные, и если их сумма больше или равна 0, то вывести в консольсообщение “Сумма положительная”, в противном случае - “Сумма отрицательная”;
+        printColor (1); // Создайте метод printColor() в теле которого задайте int переменную value и инициализируйте ее любым значением. Если value меньше 0 (0 включительно), то в консоль метод должен вывести сообщение “Красный”, если лежит в пределах от 0 (0 исключительно) до 100 (100 включительно), то “Желтый”, если больше 100 (100 исключительно) - “Зеленый”;
+        System.out.println (compareNumbers (10,5));// Создайте метод compareNumbers(), в теле которого объявите две int переменные a и b, и инициализируйте их любыми значениями, которыми захотите. Если a больше или равно b, то необходимо вывести в консоль сообщение “a >= b”, в противном случае “a < b”;
     }
-    public static void printThreeWords(){
+    static void printThreeWords(){
         System.out.println("Orange");
         System.out.println("Banana");
         System.out.println("Apple");
     }
-    public static void checkSumSign (){
-        int a = 2, b = -4;
-        int c = a + b;
-        if (c >= 0) {
-            System.out.println("Сумма положительная");
+    static String checkSumSign (int a, int b){
+            return ("Сумма " + (a + b >= 0? "положительная" : "отрицательная"));
         }
-        if (c < 0) {
-            System.out.println("Сумма отрицательная");
-        }
-    }
-    public static void printColor (){
-        int value = 1;
+    static void printColor (int value){
         if (value <= 0) {
             System.out.println("Красный");
         }
@@ -32,13 +30,7 @@ public class HomeWorkApp {
             System.out.println("Зеленый");
         }
     }
-    public static void compareNumbers () {
-        int a = 10, b=80;
-        if (a >= b) {
-            System.out.println("a >= b");
-        }
-        else {
-            System.out.println("a < b");
-        }
+    static String compareNumbers (int a, int b) {
+        return a >= b? "a >= b" : "a < b";
     }
 }
