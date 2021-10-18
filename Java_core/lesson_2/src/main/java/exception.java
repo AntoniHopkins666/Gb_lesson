@@ -13,7 +13,7 @@
  * 3 В методе main() вызвать полученный метод, обработать возможные исключения
  * MyArraySizeException и MyArrayDataException и вывести результат расчета.
  */
-public class main {
+public class exception {
     public static void main(String[] args) {
 
         String[][] arr = new String[][]{{"1", "2", "3", "4",}, {"0", "5", "6", "8"}, {"3", "6", "9", "1"}, {"5", "7", "8", "2"}};
